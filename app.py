@@ -16,7 +16,7 @@ def phnbook():
     name=request.form["name"]
     number=request.form["number"]
     marks=request.form["marks"]
-    connection=sqlite3.connect(currrentdir + "demodb.db")
+    connection=sqlite3.connect("demodb.db")
     cursor=connection.cursor()
     query="INSERT INTO demodb VALUES('{n}','{m}','{l}')".format(n=name,m=number,l=marks)
     cursor.execute(query)
